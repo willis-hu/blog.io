@@ -1,11 +1,11 @@
 ---
 layout: page
-title: "About"
-description: "你的博客描述 " 
+title: "田字格的乐趣"
+description: "有技术，有文学，有生活，走走停停，想想写写 " 
 header-img: "img/green.jpg"
 ---
 
-这一页填写你的自我介绍。
+为什么写字。
 
 
 
