@@ -17,13 +17,8 @@ gavatar: img/favicon.png # 浏览器地址栏小图标，可自定义更改
 favicon: img/favicon.png # 浏览器地址栏小图标，可自定义更改
 
 douban_username:  # 你的豆瓣id
-<<<<<<< HEAD
-twitter_username: @Hu4Willis
-github_username: willis-hu
-=======
 twitter_username: Hu4Willis
-github_username: willis_hu
->>>>>>> 541401be39689bb8833bac3dad0f91f7e71ab624
+github_username: willis-hu
 facebook_username: 
 weibo_username: 胡启根
 zhihu_username: 
