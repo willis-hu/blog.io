@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 为什么要写作
-date: 2017-11-21
+title: 一种新型的深度结构-和积网络简介
+date: 2017-11-24
 categories: blog
-tags: [写作]
-description: 写作是一种生活方式
+tags: [深度学习]
+description: spn简介
 ---
 
 SPN是一种近几年新提出的深度结构，它可以在高树宽模型上进行简单、直接的推导，以下是对SPN作的一些基础介绍：
