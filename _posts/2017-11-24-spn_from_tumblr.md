@@ -49,7 +49,7 @@ $$ \begin{aligned} \Phi(x_1, \dots, x_n, \overline{x}_1, \dots, \overline{x}_n) 
 
 - 通常，SPN是一个有向无环图。图的叶节点和变量相关，例如网络多项式中的\\(x_i\\)。图的内部节点包括sum节点和product节点，sum节点的父节点始终为produt节点，反之亦如此。从product节点到sum节点之间的边为权重。
 
-![spn-pic](/home/willis_hu/图片/spn-pic.png  "spn-pic")
+![spn-pic](willis-hu.github.io/img/spn-pic.png  "spn-pic")
 
 例如上图所示，它所代表的公式为
 $$ \begin{aligned} S(x_1, x_2, x_3, \overline{x}_1, \overline{x}_2, \overline{x}_3) = &0.8x_1(0.3x_2 + 0.7\overline{x}_2)(0.6x_3 + 0.4\overline{x}_3) + \\ &0.2\overline{x}_1(0.5x_2 + 0.5\overline{x}_2)(0.9x_3 + 0.1\overline{x}_3) \\ \end{aligned} $$
