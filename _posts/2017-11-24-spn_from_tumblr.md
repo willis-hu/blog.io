@@ -13,21 +13,17 @@ SPN是一种近几年新提出的深度结构，它可以在高树宽模型上�
 
 #### 多线性函数
 
-一个多线性函数 $ Φ(x) $ 是一种未归一化的概率分布，更具体地，它是一种在指示变量上的多重线性函数。
+一个多线性函数 $Φ(x)$ 是一种未归一化的概率分布，更具体地，它是一种在指示变量上的多重线性函数。
 
 SPN可以应用于多值离散随机变量或者连续随机变量，但在为了简化表达，本文中我们只讨论二值的随机变量，即只有0和1。
 
-假设我们有随机变量\\(X_1, \dots X_n \in \{0, 1\}\\),变量的取值组合都含有一定的概率，对某些取值求边缘概率意味着求其他无关变量的值为任意值的概率之和。我们可以利用一个多重线性函数来表述这个边缘分布。我们可以定义以下的多重线性函数：
+假设我们有随机变量$X_1, \dots X_n \in \{0, 1\}$,变量的取值组合都含有一定的概率，对某些取值求边缘概率意味着求其他无关变量的值为任意值的概率之和。我们可以利用一个多重线性函数来表述这个边缘分布。我们可以定义以下的多重线性函数：
 
 $$ f : \{0, 1\}^n \times \{0, 1\}^n \rightarrow R^+ $$
 
 同时我们定义网络多项式为：
 
 $$ \begin{aligned} \Phi(x_1, \dots, x_n, \overline{x}_1, \dots, \overline{x}_n) =  &P(X_1 = 0, X_2 = 0, \dots, X_n = 0) \overline{x}_1\overline{x}_2\dots\overline{x}_n + \\ &P(X_1 = 1, X_2 = 0, \dots, X_n = 0) x_1 \overline{x}_2\dots\overline{x}_n + \\ &P(X_1 = 0, X_2 = 1, \dots, X_n = 0) \overline{x}_1 x_2\dots\overline{x}_n + \\ &P(X_1 = 1, X_2 = 1, \dots, X_n = 0) x_1 x_2\dots\overline{x}_n + \\ &\dots + \\ &P(X_1 = 1, X_2 = 1, \dots, X_n = 1) x_1 x_2 \dots x_n \\ \end{aligned} $$
-
-**测试图片显示**
-
-<a href="http://www.codecogs.com/eqnedit.php?latex=\begin{aligned}&space;\Phi(x_1,&space;\dots,&space;x_n,&space;\overline{x}_1,&space;\dots,&space;\overline{x}_n)&space;=&space;&P(X_1&space;=&space;0,&space;X_2&space;=&space;0,&space;\dots,&space;X_n&space;=&space;0)&space;\overline{x}_1\overline{x}_2\dots\overline{x}_n&space;&plus;&space;\\&space;&P(X_1&space;=&space;1,&space;X_2&space;=&space;0,&space;\dots,&space;X_n&space;=&space;0)&space;x_1&space;\overline{x}_2\dots\overline{x}_n&space;&plus;&space;\\&space;&P(X_1&space;=&space;0,&space;X_2&space;=&space;1,&space;\dots,&space;X_n&space;=&space;0)&space;\overline{x}_1&space;x_2\dots\overline{x}_n&space;&plus;&space;\\&space;&P(X_1&space;=&space;1,&space;X_2&space;=&space;1,&space;\dots,&space;X_n&space;=&space;0)&space;x_1&space;x_2\dots\overline{x}_n&space;&plus;&space;\\&space;&\dots&space;&plus;&space;\\&space;&P(X_1&space;=&space;1,&space;X_2&space;=&space;1,&space;\dots,&space;X_n&space;=&space;1)&space;x_1&space;x_2&space;\dots&space;x_n&space;\\&space;\end{aligned}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\begin{aligned}&space;\Phi(x_1,&space;\dots,&space;x_n,&space;\overline{x}_1,&space;\dots,&space;\overline{x}_n)&space;=&space;&P(X_1&space;=&space;0,&space;X_2&space;=&space;0,&space;\dots,&space;X_n&space;=&space;0)&space;\overline{x}_1\overline{x}_2\dots\overline{x}_n&space;&plus;&space;\\&space;&P(X_1&space;=&space;1,&space;X_2&space;=&space;0,&space;\dots,&space;X_n&space;=&space;0)&space;x_1&space;\overline{x}_2\dots\overline{x}_n&space;&plus;&space;\\&space;&P(X_1&space;=&space;0,&space;X_2&space;=&space;1,&space;\dots,&space;X_n&space;=&space;0)&space;\overline{x}_1&space;x_2\dots\overline{x}_n&space;&plus;&space;\\&space;&P(X_1&space;=&space;1,&space;X_2&space;=&space;1,&space;\dots,&space;X_n&space;=&space;0)&space;x_1&space;x_2\dots\overline{x}_n&space;&plus;&space;\\&space;&\dots&space;&plus;&space;\\&space;&P(X_1&space;=&space;1,&space;X_2&space;=&space;1,&space;\dots,&space;X_n&space;=&space;1)&space;x_1&space;x_2&space;\dots&space;x_n&space;\\&space;\end{aligned}" title="\begin{aligned} \Phi(x_1, \dots, x_n, \overline{x}_1, \dots, \overline{x}_n) = &P(X_1 = 0, X_2 = 0, \dots, X_n = 0) \overline{x}_1\overline{x}_2\dots\overline{x}_n + \\ &P(X_1 = 1, X_2 = 0, \dots, X_n = 0) x_1 \overline{x}_2\dots\overline{x}_n + \\ &P(X_1 = 0, X_2 = 1, \dots, X_n = 0) \overline{x}_1 x_2\dots\overline{x}_n + \\ &P(X_1 = 1, X_2 = 1, \dots, X_n = 0) x_1 x_2\dots\overline{x}_n + \\ &\dots + \\ &P(X_1 = 1, X_2 = 1, \dots, X_n = 1) x_1 x_2 \dots x_n \\ \end{aligned}" /></a>
 
 这个网络多项式将所有可能的分布与它对应的概率值相乘，之后求总和。其中，\\(X_k\\)是随机变量，而\\(x_k\\)和\\(\overline{x}_k\\)是指示变量，它们的值表示了f是否应当包含\\(X_k\\)发生的概率，若事件发生，则\\(x_k=1\\)，否则\\(\overline{x}_k=1\\)。
 
@@ -49,17 +45,24 @@ $$ \begin{aligned} \Phi(x_1, \dots, x_n, \overline{x}_1, \dots, \overline{x}_n) 
 
 - 通常，SPN是一个有向无环图。图的叶节点和变量相关，例如网络多项式中的\\(x_i\\)。图的内部节点包括sum节点和product节点，sum节点的父节点始终为produt节点，反之亦如此。从product节点到sum节点之间的边为权重。
 
-![spn-pic](willis-hu.github.io/img/spn-pic.png  "spn-pic")
+![spn-pic](http://willis-hu.github.io/img/spn-pic.png)
 
 例如上图所示，它所代表的公式为
+
 $$ \begin{aligned} S(x_1, x_2, x_3, \overline{x}_1, \overline{x}_2, \overline{x}_3) = &0.8x_1(0.3x_2 + 0.7\overline{x}_2)(0.6x_3 + 0.4\overline{x}_3) + \\ &0.2\overline{x}_1(0.5x_2 + 0.5\overline{x}_2)(0.9x_3 + 0.1\overline{x}_3) \\ \end{aligned} $$
+
 为了能通过给定的X计算对应的SPN值，我们需要安排叶节点使得他们能符合给定的X值并且能将sum和product传递到根节点。一般情况下，我们有\\(S(x) = \Phi(x)\\)。接下来，计算某个事件的概率，计算配分函数和部分变量集合的边缘化都可以实现：
 
-1. 计算某个事件的概率，例如\\(X_1 = 1, X_2 = 0, X_3 = 1\\)的概率表示为$$ \begin{aligned}S(1, 0, 1, 0, 1, 0) = &0.8(0 + 0.7)(0.6 + 0) + 0(0 + 0.5)(0.9 + 0)\\ = &0.336\\ \end{aligned} $$
+1. 计算某个事件的概率，例如\\(X_1 = 1, X_2 = 0, X_3 = 1\\)的概率表示为
 
-2. 计算配分函数：$$ \begin{aligned}S(1, 1, 1, 1, 1, 1) = &0.8(0.3 + 0.7)(0.6 + 0.4) + 0.2(0.5 + 0.5)(0.9 + 0.1) \\= &0.8 + 0.2 \\ = &1 \\ \end{aligned} $$ 
+$$ \begin{aligned}S(1, 0, 1, 0, 1, 0) = &0.8(0 + 0.7)(0.6 + 0) + 0(0 + 0.5)(0.9 + 0)\\ = &0.336\\ \end{aligned} $$
+
+2. 计算配分函数：
+
+$$ \begin{aligned}S(1, 1, 1, 1, 1, 1) = &0.8(0.3 + 0.7)(0.6 + 0.4) + 0.2(0.5 + 0.5)(0.9 + 0.1) \\= &0.8 + 0.2 \\ = &1 \\ \end{aligned} $$ 
 
 3. 计算边缘概率，例如\\(X_1 = 1, X_2=0\\)的概率：
+
 $$ \begin{aligned}S(1, 0, 1, 0, 1, 1) = &0.8(0 + 0.7)(0.6 + 0.4) + 0(0.5 + 0.5)(0.9 + 0.1) \\ = &0.8 * 0.7 * 1 + 0 \\ = &0.56 \end{aligned} $$
 
 #### 训练
