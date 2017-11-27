@@ -41,5 +41,5 @@ SPN的两种权重学习方法：
 
 - 具体注意事项：
 
-![details](/home/willis_hu/桌面/SPN/details-in-spn.png  "details")
+![details](http://willis-hu.github.io/img/details-in-spn.png )
 
