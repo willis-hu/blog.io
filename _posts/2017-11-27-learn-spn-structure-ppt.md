@@ -2,8 +2,8 @@
 layout: post
 title: learn the structure of SPN
 date: 2017-11-27
-categories: SPN学习，深度学习
-tags: [深度学习，SPN学习]
+categories: SPN学习,深度学习
+tags: [深度学习,SPN学习]
 description: ppt中一些需要注意的内容：
 ---
 
