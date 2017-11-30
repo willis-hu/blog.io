@@ -13,8 +13,8 @@ owner:
   bio: "生活中的日记" # 填写作者信息：博客描述
 
 # Data
-gavatar: img/willishu.ico # 浏览器地址栏小图标，可自定义更改
-favicon: img/willishu.ico # 浏览器地址栏小图标，可自定义更改
+gavatar: http://willis-hu.github.io/img/kobe.jpeg # 浏览器地址栏小图标，可自定义更改
+favicon: http://willis-hu.github.io/img/kobe.ico # 浏览器地址栏小图标，可自定义更改
 
 douban_username:  # 你的豆瓣id
 twitter_username: Hu4Willis
@@ -29,7 +29,7 @@ zhihu_username:
 markdown: 	kramdown
 highlighter: 	rouge
 permalink: pretty
-paginate: 8
+paginate: 15
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
