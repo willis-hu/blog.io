@@ -1,3 +1,13 @@
+---
+layout: post
+title: RF,GBDT,XGBOOST比较
+date: 2018-04-11
+categories: 机器学习
+tags: [机器学习]
+description: 机器学习模型对比之RF,GBDT,XGBOOST
+---
+
+
 1. [随机森林学习](https://blog.csdn.net/qq547276542/article/details/78304454)
     1. 采用bootstrap sampling的思想，无放回地从数据集中进行采样，获得M个训练集，证明得到某个样本不被采样的概率为1/e。
     2. 采用CART作为基学习器，节点分裂时进行特征选择，无放回地抽样获取K个特征，从K个特征中选择最优特征。
