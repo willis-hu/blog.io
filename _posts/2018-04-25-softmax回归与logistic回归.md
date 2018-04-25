@@ -13,7 +13,7 @@ logistic回归一般用于二分类问题，对于多分类问题可以使用ovr
 
 #### softmax公式及其损失函数
 
-对于样本$x_i$以及它对应的类别$y_i$，可以认为$P(Y=j|X_i)$的计算公式为 $P(Y=j|X_i)= \frac{exp(\theta_j x_i)}{\sum_{l=1}^{n}exp(\theta_lx_i)}$ ，对于所有样本损失函数的极大似然估计即为![极大似然估计](http://deeplearning.stanford.edu/wiki/images/math/7/6/3/7634eb3b08dc003aa4591a95824d4fbd.png)。而对应的逻辑斯蒂回归的损失函数可以写成![逻辑斯谛回归损失](http://deeplearning.stanford.edu/wiki/images/math/5/4/9/5491271f19161f8ea6a6b2a82c83fc3a.png)，可以看出，logistic损失和softmax损失在形式上十分相似。对于softmax的计算公式，可以看出当所有类的参数 $\theta$都减去一个值 $\psi$，可以推导出![公式推导](http://deeplearning.stanford.edu/wiki/images/math/d/8/0/d8076908fb40b49db821dc410b03700f.png)，因而减去值$\psi$不影响概率公式的值，这表明softmax回归模型中存在冗余的参数。因而可以通过将 $\theta_0$替换为全0向量，进而使得概率公式中的第一项值为1，若应用于二分类，则转变为sigmoid函数。
+对于样本 $x_i$以及它对应的类别 $y_i$，可以认为 $P(Y=j|X_i)$的计算公式为 $P(Y=j|X_i)= \frac{exp(\theta_j x_i)}{\sum_{l=1}^{n}exp(\theta_lx_i)}$ ，对于所有样本损失函数的极大似然估计即为![极大似然估计](http://deeplearning.stanford.edu/wiki/images/math/7/6/3/7634eb3b08dc003aa4591a95824d4fbd.png)。而对应的逻辑斯蒂回归的损失函数可以写成![逻辑斯谛回归损失](http://deeplearning.stanford.edu/wiki/images/math/5/4/9/5491271f19161f8ea6a6b2a82c83fc3a.png)，可以看出，logistic损失和softmax损失在形式上十分相似。对于softmax的计算公式，可以看出当所有类的参数 $\theta$都减去一个值 $\psi$，可以推导出![公式推导](http://deeplearning.stanford.edu/wiki/images/math/d/8/0/d8076908fb40b49db821dc410b03700f.png)，因而减去值$\psi$不影响概率公式的值，这表明softmax回归模型中存在冗余的参数。因而可以通过将 $\theta_0$替换为全0向量，进而使得概率公式中的第一项值为1，若应用于二分类，则转变为sigmoid函数。
 
 #### softmax的圈中更新
 
