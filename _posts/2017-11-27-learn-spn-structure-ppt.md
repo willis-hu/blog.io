@@ -3,7 +3,7 @@ layout: post
 title: learn the structure of SPN
 date: 2017-11-27
 categories: SPN学习,深度学习
-tags: [深度学习,SPN学习]
+tags: [深度学习;SPN学习]
 description: ppt中一些需要注意的内容：
 ---
 
@@ -42,4 +42,3 @@ SPN的两种权重学习方法：
 - 具体注意事项：
 
 ![details](http://willis-hu.github.io/img/details-in-spn.png )
-
